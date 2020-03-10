@@ -13,11 +13,12 @@ function handleRemove(arr, id) {
         arr.splice(i, 1);
       }
     }
+    break;
   }
   return arr;
 }
-
 function cartReducer(state = DEFAULT_STATE, action) {
+  console.log(state.cart);
 
   switch (action.type) {
     case ADD:
@@ -32,4 +33,5 @@ function cartReducer(state = DEFAULT_STATE, action) {
   }
 }
 
+export { DEFAULT_STATE };
 export default cartReducer;

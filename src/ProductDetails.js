@@ -6,17 +6,14 @@ import Item from "./Item";
 
 
 function ProductDetails() {
-
   const products = useSelector(st => st.products)
-
-  const dispatch = useDispatch();
-  const addToCart = (product) => dispatch(add(product));
-  const removeFromCart = (product) => dispatch(remove(product));
-
   const cart = useSelector(st => st.cart);
   const { id } = useParams();
+  const dispatch = useDispatch();
+  
+  const addToCart = (product) => dispatch(add(product));
+  const removeFromCart = (product) => dispatch(remove(product));
   const matchedProduct = products[id]
-
 
   return (
     <div>

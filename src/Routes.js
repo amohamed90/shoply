@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import ProductList from "./ProductList";
 import ProductDetails from "./ProductDetails";
-// import Cart from "./Cart";
+import CartList from "./CartList";
 
 function Routes(){
 
@@ -10,7 +10,8 @@ function Routes(){
     <Switch>
       <Route exact path="/"><ProductList /></Route>
       <Route exact path="/products/:id"><ProductDetails /></Route>
-      {/* <Route exact path="/cart"><Cart /></Route> */}
+      <Route exact path="/cart"><CartList /></Route>
+      <Redirect to="/" />
     </Switch>
   )
 };
