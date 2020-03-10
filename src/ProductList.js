@@ -10,6 +10,8 @@ function ProductList() {
   const addToCart = (product) => dispatch(add(product));
   const removeFromCart = (product) => dispatch(remove(product));
   console.log(cart);
+
+  
   return (
     <div>
       <h2>Check our products</h2>
